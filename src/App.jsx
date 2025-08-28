@@ -243,15 +243,7 @@ function App() {
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="h-12 w-12 bg-blue-600 rounded-full flex items-center justify-center">
-                <Truck className="h-6 w-6 text-white" />
-              </div>
-              <div>
-                <span className="text-xl font-bold text-blue-600 block leading-tight">
-                  T.C. Wilbert
-                </span>
-                <span className="text-xs text-gray-600 block">Transportes</span>
-              </div>
+              <img src="/logo-tcw.svg" alt="TCW Transportes" className="h-12 w-auto" />
             </div>
             
             {/* Menu Desktop */}
@@ -352,7 +344,7 @@ function App() {
                   { number: `${COMPANY_INFO.experience}+`, label: 'Anos de Experiência' },
                   { number: '100%', label: 'Cargas Seguras' },
                   { number: '24h', label: 'Suporte Online' },
-                  { number: '3', label: 'Regiões Atendidas' }
+                  { number: 'Todo', label: 'Brasil' }
                 ].map((stat, index) => (
                   <div key={index} className="text-center">
                     <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-1">
@@ -382,13 +374,18 @@ function App() {
                   pela empresária <strong>Thaíse Cristina Wilbert</strong>.
                 </p>
                 <p>
-                  Atuamos no <strong>transporte rodoviário de cargas secas</strong>, com experiência, 
-                  responsabilidade e compromisso com a comunidade local.
+                  Atuamos no <strong>transporte rodoviário de cargas secas</strong> em <strong>todo o Brasil</strong>, 
+                  com experiência, responsabilidade e compromisso com a comunidade local.
                 </p>
                 <p>
                   Nossa trajetória é marcada pela dedicação em oferecer soluções logísticas 
                   eficientes, sempre priorizando a <strong className="text-blue-600">segurança</strong> e 
                   a <strong className="text-blue-600">pontualidade</strong> em cada entrega.
+                </p>
+                <p>
+                  <strong className="text-blue-600">Cobertura Nacional:</strong> Atendemos todo o território brasileiro, 
+                  com especialização nas rotas estratégicas entre <strong>Norte/Nordeste</strong> e <strong>Sudeste</strong>, 
+                  facilitando o comércio e a logística entre essas regiões.
                 </p>
               </div>
               
@@ -408,10 +405,15 @@ function App() {
             
             <div>
               <div className="bg-white p-8 rounded-2xl shadow-xl">
+                <div className="text-center mb-6">
+                  <img src="/brasil.svg" alt="Mapa do Brasil - Cobertura Nacional" className="w-64 h-64 mx-auto mb-4" />
+                  <h4 className="text-xl font-bold text-blue-600">Cobertura Nacional</h4>
+                  <p className="text-gray-600">Atendemos todo o território brasileiro</p>
+                </div>
                 <div className="grid grid-cols-2 gap-6">
                   {[
                     { icon: Truck, title: 'Frota Moderna', desc: 'Veículos atualizados e seguros' },
-                    { icon: Globe, title: 'Cobertura Nacional', desc: 'Atendemos todo o território' },
+                    { icon: Globe, title: 'Presença Nacional', desc: 'Em todo o Brasil' },
                     { icon: Zap, title: 'Agilidade', desc: 'Entregas rápidas e eficientes' },
                     { icon: TrendingUp, title: 'Crescimento', desc: 'Expansão contínua dos serviços' }
                   ].map((feature, index) => (
@@ -496,7 +498,7 @@ function App() {
       <section id="transportes" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-16">
-            Transportes & Rotas
+            Transportes & Cobertura Nacional
           </h2>
           
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
@@ -553,53 +555,56 @@ function App() {
             </div>
           </div>
 
-          {/* Rotas Frequentes */}
+          {/* Cobertura Nacional */}
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <h3 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-              Rotas Frequentes
+              Cobertura Nacional
             </h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  region: 'Região Norte',
-                  states: 'Pará, Amazonas, Tocantins',
-                  cities: ['Belém - PA', 'Manaus - AM', 'Palmas - TO'],
-                  color: 'from-green-500 to-green-600'
-                },
-                {
-                  region: 'Região Nordeste',
-                  states: 'Maranhão, Ceará, Bahia',
-                  cities: ['São Luís - MA', 'Fortaleza - CE', 'Salvador - BA'],
-                  color: 'from-yellow-500 to-orange-500'
-                },
-                {
-                  region: 'Região Centro-Oeste',
-                  states: 'Goiás, Mato Grosso, Brasília',
-                  cities: ['Goiânia - GO', 'Cuiabá - MT', 'Brasília - DF'],
-                  color: 'from-blue-500 to-blue-600'
-                }
-              ].map((route, index) => (
-                <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-                  <div className={`h-2 bg-gradient-to-r ${route.color}`}></div>
-                  <CardHeader className="text-center pb-4">
-                    <div className="bg-gray-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                      <MapPin className="h-8 w-8 text-gray-600" />
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="text-center">
+                <img src="/brasil.svg" alt="Mapa do Brasil - Cobertura Nacional" className="w-80 h-80 mx-auto mb-6" />
+                <h4 className="text-2xl font-bold text-blue-600 mb-4">Atendemos Todo o Brasil</h4>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Nossa rede de transporte cobre todo o território brasileiro, 
+                  com especialização nas rotas estratégicas entre as regiões.
+                </p>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-xl border border-blue-200">
+                  <h5 className="text-xl font-bold text-blue-800 mb-3 flex items-center">
+                    <Navigation className="mr-3 h-6 w-6" />
+                    Rotas Principais
+                  </h5>
+                  <p className="text-gray-700 mb-4">
+                    <strong>Norte e Nordeste ↔ Sudeste:</strong> Nossas rotas mais frequentes 
+                    conectam as regiões Norte e Nordeste com o Sudeste, facilitando o comércio 
+                    e a logística entre essas áreas estratégicas.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="bg-white p-3 rounded-lg">
+                      <div className="font-semibold text-blue-600">Norte → Sudeste</div>
+                      <div className="text-gray-600">Pará, Amazonas → São Paulo, Rio</div>
                     </div>
-                    <CardTitle className="text-xl text-gray-800">{route.region}</CardTitle>
-                    <CardDescription className="text-gray-600">{route.states}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      {route.cities.map((city, cityIndex) => (
-                        <li key={cityIndex} className="text-sm text-gray-600 flex items-center">
-                          <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
-                          {city}
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              ))}
+                    <div className="bg-white p-3 rounded-lg">
+                      <div className="font-semibold text-green-600">Nordeste → Sudeste</div>
+                      <div className="text-gray-600">Bahia, Ceará → Minas, Espírito Santo</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-xl border border-orange-200">
+                  <h5 className="text-xl font-bold text-orange-800 mb-3 flex items-center">
+                    <Globe className="mr-3 h-6 w-6" />
+                    Cobertura Completa
+                  </h5>
+                  <p className="text-gray-700">
+                    Além das rotas principais, atendemos <strong>todas as regiões do Brasil</strong>, 
+                    incluindo Centro-Oeste e Sul, garantindo que sua carga chegue a qualquer destino 
+                    com segurança e pontualidade.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -825,11 +830,11 @@ function App() {
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4 text-blue-400">Regiões Atendidas</h4>
+              <h4 className="font-semibold mb-4 text-blue-400">Cobertura Nacional</h4>
               <div className="space-y-2 text-gray-300">
-                <p>Norte</p>
-                <p>Nordeste</p>
-                <p>Centro-Oeste</p>
+                <p>Todo o Brasil</p>
+                <p>Rotas Norte ↔ Sudeste</p>
+                <p>Rotas Nordeste ↔ Sudeste</p>
               </div>
             </div>
           </div>

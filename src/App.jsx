@@ -562,7 +562,7 @@ function App() {
             </h3>
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="text-center">
-                <img src="/brasil.svg" alt="Mapa do Brasil - Cobertura Nacional" className="w-80 h-80 mx-auto mb-6" />
+                <img src="/brasil.svg" alt="Mapa completo do Brasil - Cobertura Nacional da TC Wilbert" className="w-80 h-80 mx-auto mb-6" />
                 <h4 className="text-2xl font-bold text-blue-600 mb-4">Atendemos Todo o Brasil</h4>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   Nossa rede de transporte cobre todo o território brasileiro, 
@@ -571,30 +571,29 @@ function App() {
               </div>
               
               <div className="space-y-6">
-                <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-xl border border-blue-200">
+                <div className="bg-gradient-to-r from-blue-50 to-gray-50 p-6 rounded-xl border border-blue-200">
                   <h5 className="text-xl font-bold text-blue-800 mb-3 flex items-center">
                     <Navigation className="mr-3 h-6 w-6" />
                     Rotas Principais
                   </h5>
-                  <p className="text-gray-700 mb-4">
-                    <strong>Norte e Nordeste ↔ Sudeste:</strong> Nossas rotas mais frequentes 
-                    conectam as regiões Norte e Nordeste com o Sudeste, facilitando o comércio 
-                    e a logística entre essas áreas estratégicas.
-                  </p>
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div className="bg-white p-3 rounded-lg">
-                      <div className="font-semibold text-blue-600">Norte → Sudeste</div>
-                      <div className="text-gray-600">Pará, Amazonas → São Paulo, Rio</div>
+                  <div className="space-y-3">
+                    <div className="flex items-center text-gray-700">
+                      <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></div>
+                      <span><strong>Norte/Nordeste ↔ Sudeste</strong></span>
                     </div>
-                    <div className="bg-white p-3 rounded-lg">
-                      <div className="font-semibold text-green-600">Nordeste → Sudeste</div>
-                      <div className="text-gray-600">Bahia, Ceará → Minas, Espírito Santo</div>
+                    <div className="flex items-center text-gray-700">
+                      <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></div>
+                      <span><strong>Sudeste ↔ Norte/Nordeste</strong></span>
                     </div>
                   </div>
+                  <p className="text-gray-600 mt-4 text-sm">
+                    Nossas rotas mais frequentes conectam essas regiões estratégicas, 
+                    facilitando o comércio e a logística nacional.
+                  </p>
                 </div>
                 
-                <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-xl border border-orange-200">
-                  <h5 className="text-xl font-bold text-orange-800 mb-3 flex items-center">
+                <div className="bg-gradient-to-r from-gray-50 to-blue-50 p-6 rounded-xl border border-gray-200">
+                  <h5 className="text-xl font-bold text-gray-800 mb-3 flex items-center">
                     <Globe className="mr-3 h-6 w-6" />
                     Cobertura Completa
                   </h5>

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://[seu-dominio].com/sitemap.xml
+
+# Crawl-delay for all bots
+Crawl-delay: 1
